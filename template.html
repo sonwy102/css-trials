@@ -31,11 +31,27 @@
         background-color: blue;
       }
 
+      .light-gray {
+        background-color: #cccccc;
+      }
+
+      .dark-gray {
+        background-color: #555555;
+      }
+
       .adjacent {
         display: inline-block;
-        margin: 50px;
+      }
+      
+      .tight{
+        margin-right: -0.25em;
+        margin-left: -0.25em;
+      }
+
+      .inner-square {
         height: 100px;
         width: 100px;
+        margin: 50px;
       }
 
       .left {
@@ -51,16 +67,69 @@
         width: 350px;
       }
 
-      .tight {
-        margin: 0 -0.25em 0 -0.25em;
-        ;
-      }
-
       .background-box {
         height: 130px;
         width: 600px;
-        background-color: #555555;
         margin: 10px;
+      }
+
+      .inner-box {
+        height: 91%;
+        width: 32%;
+        margin: 6px;
+      }
+
+      .inner-box-2 {
+        height: 100px;
+        width: 23.75%; 
+        vertical-align: top;
+        margin: 1%;
+      }
+
+      .short {
+        height: 75px;
+      }
+
+      .inner-box-3 {
+        height: 91%;
+        width: 48.5%;
+        vertical-align: bottom;
+        margin: 1%;
+      }
+
+      .shortest {
+        height: 35px;
+      }
+
+      .left-most {
+        margin-right: 1px;
+      }
+      .right-most {
+        margin-left: 1px;
+      }
+
+      .background-box-2 {
+        display: flex;
+        height: 200px;
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 10px;
+        justify-content: space-evenly;
+      }
+
+      .inner-shape {
+        height: 180px;
+        width: 180px;
+      }
+
+      .sqaure-border {
+        border: 10px double black;
+      }
+
+      .circle-border {
+        border: 10px dotted black;
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -68,43 +137,48 @@
   <body>
     <h1>Hello world.</h1>
 
-    <div class="germany black"></div>
-    <div class="germany red"></div>
-    <div class="germany gold"></div>
+    <div>
+      <div class="germany black"></div>
+      <div class="germany red"></div>
+      <div class="germany gold"></div>
+    </div>
 
-    <div class="adjacent red box tight">
-      <div class="adjacent black left"></div>
-      <div class="adjacent black right"></div>
-    </div>
-    
-    <div class="adjacent blue box tight">
-      <div class="adjacent black left"></div>
-      <div class="adjacent black right"></div>
-    </div>
+    <div>
+      <div class="adjacent red box tight">
+        <div class="adjacent black left inner-square"></div>
+        <div class="adjacent black right inner-square"></div>
+      </div>
+      
+      <div class="adjacent blue box tight">
+        <div class="adjacent black left inner-square"></div>
+        <div class="adjacent black right inner-square"></div>
+      </div>
+    </div> 
     
     <div>
-      <div class="background-box">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="background-box dark-gray">
+        <div class="adjacent inner-box light-gray left-most"></div>
+        <div class="adjacent inner-box light-gray left-most right-most"></div>
+        <div class="adjacent inner-box light-gray right-most"></div>
       </div>
 
-      <div class="background-box">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="background-box dark-gray">
+        <div class="adjacent inner-box-2 light-gray left-most"></div>
+        <div class="adjacent inner-box-2 short light-gray left-most right-most"></div>
+        <div class="adjacent inner-box-2 light-gray left-most right-most"></div>
+        <div class="adjacent inner-box-2 short light-gray right-most"></div>
       </div>
 
-      <div class="background-box">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="background-box dark-gray">
+        <div class="adjacent inner-box-3 light-gray left-most shortest"></div>
+        <div class="adjacent inner-box-3 light-gray right-most"></div>
       </div>
     </div>
 
-
-    
-
+    <div class="background-box-2 light-gray">
+      <div class="adjacent inner-shape sqaure-border"></div>
+      <div class="adjacent inner-shape circle-border"></div>
+      <div class="adjacent inner-shape sqaure-border"></div>
+    </div>
   </body>
-
 </html>
