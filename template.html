@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      body {
+        margin: 0;
+      }
+
+      h1 {
+        font-family: fantasy;
+      }
+      .germany {
+        height: 100px;
+        width: 500px;
+      }
+
+      .black {
+        background-color: black;
+      }
+
+      .gold {
+        background-color: #ffd700;
+      }
+      
+      .red {
+        background-color: red;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .adjacent {
+        display: inline-block;
+        margin: 50px;
+        height: 100px;
+        width: 100px;
+      }
+
+      .left {
+        margin-right: 23px;
+      }
+
+      .right {
+        margin-left: 23px;
+      }
+
+      .box {
+        height: 200px;
+        width: 350px;
+      }
+
+      .tight {
+        margin: 0 -0.25em 0 -0.25em;
+        ;
+      }
+
+      .background-box {
+        height: 130px;
+        width: 600px;
+        background-color: #555555;
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello world.</h1>
+
+    <div class="germany black"></div>
+    <div class="germany red"></div>
+    <div class="germany gold"></div>
+
+    <div class="adjacent red box tight">
+      <div class="adjacent black left"></div>
+      <div class="adjacent black right"></div>
+    </div>
+    
+    <div class="adjacent blue box tight">
+      <div class="adjacent black left"></div>
+      <div class="adjacent black right"></div>
+    </div>
+    
+    <div>
+      <div class="background-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="background-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="background-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+
+    
+
+  </body>
+
+</html>
